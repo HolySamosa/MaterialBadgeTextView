@@ -122,7 +122,7 @@ public class MaterialBadgeTextView extends TextView {
             OvalShape oval = new OvalShadow(mShadowRadius, diameter);
             circle = new ShapeDrawable(oval);
             ViewCompat.setLayerType(this, ViewCompat.LAYER_TYPE_SOFTWARE, circle.getPaint());
-            circle.getPaint().setShadowLayer(mShadowRadius, shadowXOffset, shadowYOffset, KEY_SHADOW_COLOR);
+            //circle.getPaint().setShadowLayer(mShadowRadius, shadowXOffset, shadowYOffset, KEY_SHADOW_COLOR);
             circle.getPaint().setColor(backgroundColor);
             if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.JELLY_BEAN) {
                 setBackgroundDrawable(circle);
@@ -132,7 +132,7 @@ public class MaterialBadgeTextView extends TextView {
         } else if (text.length() > 1) {/**第二种背景是上下两边为直线的椭圆, 当文本长度大于1时 */
             SemiCircleRectDrawable sr = new SemiCircleRectDrawable();
             ViewCompat.setLayerType(this, ViewCompat.LAYER_TYPE_SOFTWARE, sr.getPaint());
-            sr.getPaint().setShadowLayer(mShadowRadius, shadowXOffset, shadowYOffset, KEY_SHADOW_COLOR);
+            //sr.getPaint().setShadowLayer(mShadowRadius, shadowXOffset, shadowYOffset, KEY_SHADOW_COLOR);
             sr.getPaint().setColor(backgroundColor);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                 setBackground(sr);
